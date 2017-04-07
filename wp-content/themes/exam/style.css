@@ -4,6 +4,26 @@ Author: LiudmylaMoshta
 Author URI: http://mysite.com
 Version: 1.0
 */
-@import url(./flexslider/flexslider.css);
+ul {
+  list-style-type: none;
+  padding-left: 0; }
+
+a {
+  color: #000000; }
+
+h1, h2, h3 {
+  margin-top: 0;
+  margin-bottom: 0; }
+
+.social-media-icons {
+  list-style-type: none; }
+  .social-media-icons li {
+    float: left;
+    padding-left: 5px; }
+    .social-media-icons li a {
+      color: #000000; }
+
+.navbar-exam .active {
+  background-color: #00a0d2; }
 
 /*# sourceMappingURL=style.css.map */

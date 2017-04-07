@@ -13,24 +13,28 @@
 
 	<?php wp_head(); ?>
 </head>
+
 <body>
+
 <header id="header">
 	<nav class="navbar navbar-exam">
 		<div class="navbar-header navbar-header-exam">
 			<button type="button" class="navbar-toggle collapsed btn-collapsed-exam" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
 				<span class="fa fa-reorder"></span>
 			</button>
+            <h1 class="brand-logo" >
+                <a href="<?php echo home_url();?>">
+                    <img src="<?php echo get_theme_mod('logo_image'); ?>" class="img-responsive" alt="logo"/>
+                </a>
+            </h1>
 		</div>
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<?php
 			wp_nav_menu( array(
 				'theme_location'=>'Menu1',
-				'menu_class'=>'nav navbar-nav navbar-left navbar-exam'
+				'menu_class'=>'nav navbar-nav navbar-right navbar-exam'
 			))
 			;?>
 		</div>
 	</nav>
-	<div class="image-welcome ">
-		<img src="<?php echo get_theme_mod('image welcome'); ?>" class="img-responsive" alt="logo"/>
-	</div>
 </header>
