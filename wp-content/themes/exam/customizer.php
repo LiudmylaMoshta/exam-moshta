@@ -6,6 +6,23 @@
  * Time: 21:47
  */
 	function exam_customize_register( $wp_customize ) {
+		/*bg-welcome-image*/
+
+		$wp_customize->add_setting( 'theme_footer_bg' );
+		$wp_customize->add_section( 'theme_footer_bg', array(
+			'title'    => __( 'theme_footer_bg', 'breaker' ),
+			'priority' => 30,
+		) );
+		$wp_customize->add_control(
+			new WP_Customize_Image_Control(
+				$wp_customize,'theme_footer_bg',array(
+					'label' => 'Header Background Image',
+					'section' => 'title_tagline',
+					'settings' => 'theme_footer_bg',
+					'priority' => 2
+				)
+			)
+		);
 		/*******************************************
 		Color scheme
 		 ********************************************/
@@ -23,12 +40,12 @@
 		) );
 		$OptionsColors[] = array(
 			'slug'=>'header_bg_color',
-			'default' => '#ffffff',
+			'default' => '#2c3e50',
 			'label' => 'Header Background Color'
 		);
 		$OptionsColors[] = array(
 			'slug'=>'footer_bg_color',
-			'default' => '#ffffff',
+			'default' => '#ff4848',
 			'label' => 'Footer Background Color'
 		);
 		$OptionsColors[] = array(
@@ -65,25 +82,41 @@
 		}
 
 //*Customize logo-image*/
-	$wp_customize->add_setting( 'logo_image', array(
+	$wp_customize->add_setting( 'image', array(
 		'default'   => '',
 		'transport' => 'refresh',
 	) );
 
 	$wp_customize->add_section( 'logo', array(
-		'title'    => __( 'Logo image', 'exam' ),
+		'title'    => __( 'image', 'exam' ),
 		'priority' => 30,
 	) );
 
-	$wp_customize->add_control( new WP_Customize_Upload_Control( $wp_customize, 'logo_image', array(
-		'label'    => __( 'Upload logo', 'exam' ),
-		'section'  => 'logo',
-		'settings' => 'logo_image',
+	$wp_customize->add_control( new WP_Customize_Upload_Control( $wp_customize, 'image', array(
+		'label'    => __( 'Upload', 'exam' ),
+		'section'  => 'image',
+		'settings' => 'image',
 	) ) );
 
+		//*Customize logo-image*/
+		$wp_customize->add_setting( 'image', array(
+			'default'   => '',
+			'transport' => 'refresh',
+		) );
+
+		$wp_customize->add_section( 'image', array(
+			'title'    => __( 'image', 'exam' ),
+			'priority' => 30,
+		) );
+
+		$wp_customize->add_control( new WP_Customize_Upload_Control( $wp_customize, 'logo_image', array(
+			'label'    => __( 'Upload logo', 'exam' ),
+			'section'  => 'logo',
+			'settings' => 'logo_image',
+		) ) );
 
 	/*Customize text year footer (<?php echo get_theme_mod('year _footer'); ?>)*/
-	$wp_customize->add_setting( 'year _footer' , array(
+	$wp_customize->add_setting( 'year _footer', array(
 		'default'     => '',
 		'transport'   => 'refresh',
 	) );
@@ -96,6 +129,22 @@
 		'section'    => 'year',
 		'settings'   => 'year _footer',
 	) ) );
+
+		/*Customize text google-maps (<?php echo get_theme_mod('google-maps'); ?>)*/
+		$wp_customize->add_setting( 'google_maps', array(
+			'default'     => '',
+			'transport'   => 'refresh',
+		) );
+		$wp_customize->add_section( 'maps' , array(
+			'title'      => __( 'google_maps', 'exam' ),
+			'priority'   => 30,
+		) );
+		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'google_maps', array(
+			'label'        => __( 'google_maps', 'exam' ),
+			'section'    => 'maps',
+			'settings'   => 'google_maps',
+		) ) );
+
 
 
 		/*Customize panel-contact*/
@@ -135,22 +184,37 @@
 		'section'    => 'tel',
 		'settings'   => 'contact_tel',
 	) ) );
+		/*Customize text TEL-Company (<?php echo get_theme_mod('year _footer'); ?>)*/
+		$wp_customize->add_setting( 'title-contact' , array(
+			'default'     => '',
+			'transport'   => 'refresh',
+		) );
+		$wp_customize->add_section( 'title-contact' , array(
+			'title'      => __( 'title-contact', 'exam' ),
+			'priority'   => 30,
+			'panel' => 'contact-company'
+		) );
+		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'title-contact', array(
+			'label'        => __( 'title-contact', 'exam' ),
+			'section'    => 'title-contact',
+			'settings'   => 'title-contact',
+		) ) );
 	/*Customize Email (<a href="mailto:<?php echo get_theme_mod('contact_mail'); ?>" class="email">
                     <?php echo get_theme_mod('contact_mail'); ?>
                 </a>)*/
-	$wp_customize->add_setting( 'contact_mail' , array(
+	$wp_customize->add_setting( 'contact' , array(
 		'default'     => '',
 		'transport'   => 'refresh',
 	) );
-	$wp_customize->add_section( 'mail' , array(
-		'title'      => __( 'E-mail', 'exam' ),
+	$wp_customize->add_section( 'contact' , array(
+		'title'      => __( 'contact', 'exam' ),
 		'priority'   => 30,
 		'panel' => 'contact-company'
 	) );
-	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'contact_mail', array(
-		'label'        => __( 'Your email', 'exam' ),
-		'section'    => 'mail',
-		'settings'   => 'contact_mail',
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'contact', array(
+		'label'        => __( 'Your contact_', 'exam' ),
+		'section'    => 'contact',
+		'settings'   => 'contact',
 	) ) );
 
 }

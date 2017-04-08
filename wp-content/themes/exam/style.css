@@ -4,6 +4,9 @@ Author: LiudmylaMoshta
 Author URI: http://mysite.com
 Version: 1.0
 */
+html {
+  font-size: 10px; }
+
 ul {
   list-style-type: none;
   padding-left: 0; }
@@ -15,15 +18,135 @@ h1, h2, h3 {
   margin-top: 0;
   margin-bottom: 0; }
 
-.social-media-icons {
-  list-style-type: none; }
-  .social-media-icons li {
-    float: left;
-    padding-left: 5px; }
-    .social-media-icons li a {
-      color: #000000; }
+#header {
+  background-color: #2c3e50; }
+  #header .navbar-exam {
+    font: 400 1.125rem Roboto;
+    text-transform: uppercase;
+    margin-bottom: 0; }
+    #header .navbar-exam .active {
+      background: transparent; }
+      #header .navbar-exam .active a {
+        color: #ff4848; }
+    #header .navbar-exam a {
+      color: #ffffff; }
 
-.navbar-exam .active {
-  background-color: #00a0d2; }
+.nav > li > a:hover {
+  background-color: transparent; }
+
+.section-top {
+  background-color: #ff4848; }
+  .section-top .container {
+    padding-top: 50px;
+    color: #ffffff;
+    font: 300 1.5rem Roboto; }
+  .section-top img {
+    width: 100%;
+    height: auto; }
+  .section-top .title-top {
+    font: 700 3.75rem Roboto;
+    text-transform: uppercase; }
+    .section-top .title-top span {
+      color: #2c3e50; }
+  .section-top .content-top {
+    padding-top: 80px; }
+  .section-top .title-professional {
+    font: 400 3rem Roboto;
+    padding-top: 44px; }
+  .section-top .big-text {
+    font: 400 1.875rem Roboto; }
+  .section-top .text-top {
+    margin-top: 42px; }
+
+.section-welcome .text-welcome .textwidget {
+  font: 300 1.125rem/1.5rem Roboto;
+  color: #004966; }
+  .section-welcome .text-welcome .textwidget .link-welcome {
+    color: #ff4848;
+    font-weight: 700; }
+.section-welcome .title-welcome {
+  color: #004966;
+  font: 700 2.25rem Roboto;
+  text-transform: uppercase; }
+  .section-welcome .title-welcome .span {
+    font-size: 72px; }
+
+.section-servise {
+  background-color: #004966;
+  text-align: center;
+  color: #ffffff; }
+  .section-servise .title-servise-top {
+    margin-top: 50px;
+    font: 300 2.25rem/1.5rem Roboto; }
+  .section-servise .textwidget {
+    font: 400 1.125rem/1.5rem  Roboto;
+    padding-top: 30px; }
+  .section-servise .list-services {
+    padding-top: 56px; }
+    .section-servise .list-services .title-servises {
+      font: 700 1.875rem/1.5rem Roboto;
+      padding-top: 25px;
+      padding-bottom: 25px; }
+    .section-servise .list-services p {
+      font: 400 1.125rem/1.5rem Roboto; }
+
+.section-portfolio {
+  color: #000000;
+  padding-top: 50px;
+  text-align: center; }
+  .section-portfolio img {
+    width: 100%;
+    height: auto; }
+  .section-portfolio .text-portfolio .title-portfolio {
+    font: 300 2.25rem/1.5rem Roboto; }
+  .section-portfolio .text-portfolio .textwidget {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    font: 400 1.125rem/1.5rem Roboto; }
+    .section-portfolio .text-portfolio .textwidget .list-category {
+      padding-top: 25px; }
+      .section-portfolio .text-portfolio .textwidget .list-category li {
+        display: inline-block;
+        margin-right: 10px;
+        font: 300 1.875rem/1.5rem Roboto; }
+
+footer {
+  text-align: center; }
+  footer .section-flexslider {
+    background-color: #ff4848;
+    padding-top: 25px;
+    padding-bottom: 25px; }
+    footer .section-flexslider li {
+      list-style-type: none; }
+      footer .section-flexslider li .title-slider {
+        color: #ffffff;
+        font: 300 2.25rem/1.5rem Roboto;
+        padding-bottom: 25px; }
+  footer .container {
+    padding-top: 55px; }
+    footer .container .google-maps {
+      color: #ffffff; }
+      footer .container .google-maps a {
+        color: #ffffff; }
+      footer .container .google-maps .title-footer {
+        font: 300 2.25rem/1.5rem Roboto; }
+      footer .container .google-maps .textwidget {
+        font-family: 300 1.125rem/1.5rem Roboto; }
+  footer .top-end {
+    background-color: #17212a; }
+    footer .top-end img {
+      display: block;
+      margin: 0 auto; }
+  footer .bottom-end {
+    background-color: #ff4848; }
+  footer .contact form input, footer .contact form textarea {
+    width: 80%;
+    margin-top: 10px; }
+  footer .contact form .wpcf7-submit {
+    width: 40%;
+    background-color: #ff4848;
+    color: #ffffff; }
+  footer .google-maps iframe {
+    width: 80%; }
 
 /*# sourceMappingURL=style.css.map */

@@ -12,21 +12,15 @@
  <h1 class="title-project"><?php the_title(); ?></h1>
 </section>
 
+
+
 <div class="container-fluid">
  <div class="row">
-  <div class="col-xs-12 col-sm-8 col-md-8 ">
+  <div class=" col-md-8 ">
    <div class="row">
-    <blockquote class="col-md-6">
-		<?php if ( is_active_sidebar( 'postin-widget-area' ) ) : ?>
-         <div id="postin-widget-area" class="sidebar">
-			 <?php dynamic_sidebar( 'postin-widget-area' ); ?>
-         </div>
-		<?php endif; ?>
-     <span class="text-right"></span>
-    </blockquote>
 	   <?php
 	   $wp_query = new WP_Query();
-	   $wp_query->query( 'showposts=7' . '&paged=' . $paged );
+	   $wp_query->query( 'showposts=10' . '&paged=' . $paged );
 	   while ( $wp_query->have_posts() ) : $wp_query->the_post(); ?>
 
         <article class="content  col-md-6">
@@ -39,6 +33,7 @@
           <p class="text-content">
 			  <?php the_excerpt(); ?>
           </p>
+	         <?php the_date('Y.m.d', '<span>', '</span>'); ?>
          </div>
         </article>
 
@@ -71,8 +66,16 @@
    </div>
 
   </div>
+ <div class="col-md-4">
+	 <?php get_sidebar(); ?>
+ </div>
  </div>
 </div>
 
-<?php get_footer(); ?>
+
+
+<?php
+
+get_footer();
+?>
 
